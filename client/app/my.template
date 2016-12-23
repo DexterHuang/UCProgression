@@ -1,0 +1,15 @@
+ng2ComponentGenerator:
+  files:
+    component:
+      create: true
+      extension: "ts"
+      template: "${workspaceRoot}/my.template"
+    css:
+      create: true
+      extension: "css"
+    html:
+      create: true
+      extension: "html"
+    module:
+      create: true
+      extension: "ts"

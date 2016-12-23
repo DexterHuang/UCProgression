@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {TaskService} from '../../services/task.service'
-import {Task} from '../../../Tsak';
+import {Task} from '../../models/Task';
 
 @Component({
   moduleId: module.id,
@@ -44,7 +44,7 @@ export class TasksComponent {
     })
   }
 
-  updateStates(task){
+  updateStates(task:Task){
     var _task = {
       _id: task._id,
       title: task.title,

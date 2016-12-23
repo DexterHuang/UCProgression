@@ -4,7 +4,7 @@ var bodyPaser = require('body-parser');
 
 var index = require('./routes/index');
 var tasks = require('./routes/tasks');
-tasks
+var generalAPI = require('./routes/generalAPI');
 
 var port = 3000;
 
@@ -26,6 +26,8 @@ app.use(bodyPaser.urlencoded({
 
 app.use('/', index);
 app.use('/api', tasks);
+app.use('/Gapi', generalAPI)
+app.use('/models', express.static('client/models'))
 
 app.listen(port, function() {
     console.log("sever started on port " + port);

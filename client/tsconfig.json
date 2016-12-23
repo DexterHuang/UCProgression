@@ -11,7 +11,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "typeRoots": [
       "../../node_modules/@types/"
-    ]
+  ],
+    "types": ["node"]
   },
   "compileOnSave": true,
   "exclude": [

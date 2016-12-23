@@ -1,1 +1,31 @@
 <!--component html goes here -->
+<form class="well" (submit)="addStudent($event)">
+    <div class="form-group">
+        <input type="text" [(ngModel)]="newStudent.studentId" name="studentId" class="form-control" placeholder="Student ID" value="">
+        <input type="text" [(ngModel)]="newStudent.firstName" name="firstName" class="form-control" placeholder="Student firstName" value="">
+        <input type="text" [(ngModel)]="newStudent.lastName" name="lastName" class="form-control" placeholder="Student lastName" value="">
+        <input type="text" [(ngModel)]="newStudent.phoneNumber" name="phoneNumber" class="form-control" placeholder="Student phoneNumber" value="">
+        <input type="text" [(ngModel)]="newStudent.address" name="address" class="form-control" placeholder="Student address" value="">
+        <input type="submit" name="Submit" value="Submit" class="btn-primary pull-right">
+    </div>
+</form>
+<div class="student-list">
+    <div class="" *ngFor="let student of studentList">
+        <div class="col-md-2 col-sm-2">
+            {{student.firstName}}
+        </div>
+        <div class="col-md-2 col-sm-2">
+            {{student.lastName}}
+        </div>
+        <div class="col-md-2 col-sm-2">
+            {{student.phoneNumber}}
+        </div>
+        <div class="col-md-4 col-sm-4">
+            {{student.address}}
+        </div>
+        <div class="col-md-2 col-sm-2">
+            <button type="" class="btn btn-danger pull-right" name="button" (click)="removeStudent(student._id)">Delete</button>
+        </div>
+    </div>
+
+</div>
